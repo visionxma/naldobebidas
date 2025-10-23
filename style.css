@@ -15,6 +15,80 @@ body {
     color: #1F1F1F;
     background-color: #ffffff;
 }
+/* --- Hero Image Section --- */
+.hero-image-section {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.hero-image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Hero Text Section --- */
+.hero-text-section {
+  background-color: #fafafa; /* cor da faixa abaixo da imagem */
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-text-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* --- Botões --- */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #25D366;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #FFD400;
+  color: #222;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.03);
+}
 
 .container {
     max-width: 1200px;
@@ -131,8 +205,59 @@ p {
 }
 
 .whatsapp-btn {
-    background-color: #25D366;
+    background-color: #00a73d;
     color: white;
+}
+/* --- Botões principais da seção CTA --- */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-buttons .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 280px; /* mesma largura */
+  height: 55px; /* mesma altura */
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* sombra */
+}
+
+/* WhatsApp */
+.cta-buttons .btn-primary {
+  background-color: #00a73d;
+  color: #fff;
+  white-space: nowrap; /* mantém tudo na mesma linha */
+}
+
+.cta-buttons .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(37, 211, 102, 0.4);
+}
+
+/* Zé Delivery */
+.cta-buttons .btn-secondary {
+  background-color: #FFD400;
+  color: #000;
+}
+
+.cta-buttons .btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Ícones dentro dos botões */
+.cta-buttons svg {
+  flex-shrink: 0;
+  fill: currentColor;
 }
 
 .ze-btn {
@@ -599,61 +724,123 @@ p {
 }
 
 /* Footer */
+/* Footer principal */
 .footer {
-    background-color: #1F1F1F;
-    color: white;
-    padding: 64px 0 0;
+  background-color: #1F1F1F;
+  color: #fff;
+  padding-top: 64px;
+  margin: 0;
+  width: 100%;
+  
 }
 
+/* Conteúdo do footer */
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 48px;
-    margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 48px;
+  margin: 0 auto 32px auto;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
-.footer-section h3 {
-    color: #FFCC00;
-    margin-bottom: 16px;
-}
-
+.footer-section h3,
 .footer-section h4 {
-    color: #FFCC00;
-    margin-bottom: 16px;
-    font-size: 1.125rem;
+  color: #FFCC00;
+  margin-bottom: 12px;
 }
 
 .footer-section p {
-    color: #cccccc;
-    margin-bottom: 8px;
+  color: #cccccc;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .footer-section a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #FFCC00;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #FFCC00;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 .footer-section a:hover {
-    color: #FFD700;
+  color: #FFD700;
+  transform: translateY(-2px);
 }
 
+/* Parte inferior do footer */
 .footer-bottom {
-    background-color: #000000;
-    padding: 24px 0;
-    text-align: center;
-    margin: 0 -20px;
+  width: 100%;
+  background-color: #111;
+  padding: 20px 0;
+  border-top: 1px solid #333;
 }
 
-.footer-bottom p {
-    color: #cccccc;
-    margin: 0;
-    font-size: 0.875rem;
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
+.footer-logo p {
+  color: #cccccc;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-logo img {
+  height: 34px;
+  width: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-logo img:hover {
+  opacity: 1;
+}
+/* reset mínimo */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* garante fundo do site (sem risco de branco) */
+html, body {
+  height: 100%;
+  background: #000; /* cor do seu rodapé */
+  color: #fff;
+}
+
+/* layout em coluna: conteúdo + footer */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* conteúdo principal (main) deve crescer */
+main {
+  flex: 1 0 auto; /* ocupa espaço disponível */
+}
+
+/* footer sempre no fim */
+footer {
+  flex-shrink: 0;
+  margin-top: auto; /* empurra para baixo */
+  background: #000;
+  padding: 20px 0;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
