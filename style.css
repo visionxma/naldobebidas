@@ -814,24 +814,34 @@ p {
   padding: 0;
 }
 
-/* garante fundo do site (sem risco de branco) */
 html, body {
   height: 100%;
   background: #000; /* cor do seu rodapé */
   color: #fff;
 }
 
-/* layout em coluna: conteúdo + footer */
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* conteúdo principal (main) deve crescer */
 main {
   flex: 1 0 auto; /* ocupa espaço disponível */
 }
+.hero-image-section {
+  width: 100%;
+  min-height: 500px; /* ou 100vh se quiser ocupar toda tela */
+  overflow: hidden;
+}
+
+.hero-image-section img {
+  width: 100%;
+  height: 100%; /* preenche a altura da section */
+  object-fit: cover; /* mantém proporção e corta o excesso */
+  display: block;
+}
+
 
 /* footer sempre no fim */
 footer {
