@@ -13,8 +13,17 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #1F1F1F;
+    background-color: #1F1F1F;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
     background-color: #ffffff;
 }
+
 /* --- Hero Image Section --- */
 .hero-image-section {
   width: 100%;
@@ -30,7 +39,7 @@ body {
 
 /* --- Hero Text Section --- */
 .hero-text-section {
-  background-color: #fafafa; /* cor da faixa abaixo da imagem */
+  background-color: #fafafa;
   text-align: center;
   padding: 60px 20px;
 }
@@ -208,6 +217,7 @@ p {
     background-color: #00a73d;
     color: white;
 }
+
 /* --- Botões principais da seção CTA --- */
 .cta-buttons {
   display: flex;
@@ -221,21 +231,21 @@ p {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: 280px; /* mesma largura */
-  height: 55px; /* mesma altura */
+  width: 280px;
+  height: 55px;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 10px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* sombra */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* WhatsApp */
 .cta-buttons .btn-primary {
   background-color: #00a73d;
   color: #fff;
-  white-space: nowrap; /* mantém tudo na mesma linha */
+  white-space: nowrap;
 }
 
 .cta-buttons .btn-primary:hover {
@@ -724,14 +734,13 @@ p {
 }
 
 /* Footer */
-/* Footer principal */
 .footer {
   background-color: #1F1F1F;
   color: #fff;
   padding-top: 64px;
   margin: 0;
   width: 100%;
-  
+  flex-shrink: 0;
 }
 
 /* Conteúdo do footer */
@@ -807,50 +816,6 @@ p {
 .footer-logo img:hover {
   opacity: 1;
 }
-/* reset mínimo */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-  background: #000; /* cor do seu rodapé */
-  color: #fff;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1 0 auto; /* ocupa espaço disponível */
-}
-.hero-image-section {
-  width: 100%;
-  min-height: 500px; /* ou 100vh se quiser ocupar toda tela */
-  overflow: hidden;
-}
-
-.hero-image-section img {
-  width: 100%;
-  height: 100%; /* preenche a altura da section */
-  object-fit: cover; /* mantém proporção e corta o excesso */
-  display: block;
-}
-
-
-/* footer sempre no fim */
-footer {
-  flex-shrink: 0;
-  margin-top: auto; /* empurra para baixo */
-  background: #000;
-  padding: 20px 0;
-}
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -987,10 +952,6 @@ footer {
     .app-btn {
         width: 160px;
         justify-content: center;
-    }
-
-    .footer-bottom {
-        margin: 0 -16px;
     }
 }
 
